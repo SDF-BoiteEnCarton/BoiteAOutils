@@ -1,0 +1,12 @@
+{
+  "Icon": "Icons/ItemCategories/Editor.png",
+  "Order": 4,
+  "Children": [
+    {
+      "Id": "Outils",
+      "Name": "server.ui.itemcategory.buildertool",
+      "Icon": "Icons/ItemCategories/Builder Tools.png",
+      "InfoDisplayMode": "Tooltip"
+    }
+  ]
+}
