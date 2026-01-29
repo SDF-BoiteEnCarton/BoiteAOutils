@@ -21,5 +21,4 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
         getCodecRegistry(Interaction.CODEC)
             .register("boiteaoutils_distribute", Distribute::class.java, Distribute.CODEC)
     }
-
 }
