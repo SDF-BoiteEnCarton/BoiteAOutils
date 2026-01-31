@@ -82,6 +82,32 @@ tasks.withType<Jar> {
     }
 }
 
+tasks.register<Jar>("fatJar") {
+    group = "build"
+    description = "Assembles a jar archive containing the main classes and all dependencies."
+    archiveClassifier.set("all")
+
+    // Include your own code
+    from(sourceSets.main.get().output)
+
+    // Include all dependencies (Kotlin stdlib, etc.)
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath.get()
+            .filter { it.name.contains("kotlin-stdlib") }
+            .map { zipTree(it) }
+    }) {
+        // Prevent duplicate META-INF files from crashing the build
+        exclude("META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA")
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+
+    manifest {
+        attributes["Main-Class"] = plugin_main_entrypoint
+        attributes["Implementation-Version"] = project.version
+    }
+}
+
 publishing {
     repositories {
         // This is where you put repositories that you want to publish to.
@@ -114,6 +140,7 @@ val syncAssets = tasks.register<Copy>("syncAssets") {
 
     // IMPORTANT: Protect the manifest template from being overwritten
     exclude("manifest.json")
+    includeEmptyDirs = false
 
     // If a file exists, overwrite it with the new version from the game
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
