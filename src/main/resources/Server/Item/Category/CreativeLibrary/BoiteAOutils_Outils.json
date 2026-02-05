@@ -1,5 +1,5 @@
 {
-  "Icon": "Icons/ItemCategories/Editor.png",
+  "Icon": "Icons/ItemCategories/games.png",
   "Order": 4,
   "Children": [
     {
@@ -7,6 +7,16 @@
       "Name": "server.ui.itemcategory.buildertool",
       "Icon": "Icons/ItemCategories/Builder Tools.png",
       "InfoDisplayMode": "Tooltip"
+    },
+	  {
+      "Name": "Love Letter",
+      "Icon": "Icons/ItemCategories/Love_Letter_Caree_Verso_128x128.png",
+      "Id": "Loveletter"
+    },
+    {
+      "Name": "Boop",
+      "Icon": "Icons/ItemCategories/BoopCardLogoIcon.png",
+      "Id": "Boop"
     }
   ]
 }
