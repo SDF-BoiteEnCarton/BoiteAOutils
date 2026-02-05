@@ -4,8 +4,11 @@ import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Int
 import com.hypixel.hytale.server.core.plugin.JavaPlugin
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit
 import me.clcondorcet.boiteaoutils.commands.BoiteCommand
+import me.clcondorcet.boiteaoutils.components.registerComponentTypes
+import me.clcondorcet.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
 import me.clcondorcet.boiteaoutils.interactions.Distribute
 import me.clcondorcet.boiteaoutils.packets.HidingCardsPacketHandler
+import me.clcondorcet.boiteaoutils.systems.HolographicContainerQuantityCounterSystem
 
 class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
 
@@ -22,5 +25,15 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
         getCodecRegistry(Interaction.CODEC)
             .register("boiteaoutils_distribute", Distribute::class.java, Distribute.CODEC)
         HidingCardsPacketHandler().registerPacketCounters()
+        registerComponentTypes(chunkStoreRegistry, entityStoreRegistry)
+    }
+
+    override fun start() {
+        registerSystems()
+    }
+
+    fun registerSystems() {
+        chunkStoreRegistry.registerSystem(HolographicContainerQuantityCounterInitializer())
+        chunkStoreRegistry.registerSystem(HolographicContainerQuantityCounterSystem())
     }
 }
