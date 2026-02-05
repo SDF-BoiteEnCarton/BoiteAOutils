@@ -5,11 +5,13 @@ import com.hypixel.hytale.component.ComponentType
 import com.hypixel.hytale.component.Ref
 import com.hypixel.hytale.component.Store
 import com.hypixel.hytale.math.util.ChunkUtil
+import com.hypixel.hytale.math.vector.Vector3d
+import com.hypixel.hytale.math.vector.Vector3i
 import com.hypixel.hytale.protocol.BlockPosition
-import com.hypixel.hytale.protocol.MovementStates
 import com.hypixel.hytale.protocol.SoundCategory
 import com.hypixel.hytale.server.core.Message
 import com.hypixel.hytale.server.core.asset.type.soundevent.config.SoundEvent
+import com.hypixel.hytale.server.core.entity.UUIDComponent
 import com.hypixel.hytale.server.core.entity.entities.Player
 import com.hypixel.hytale.server.core.entity.movement.MovementStatesComponent
 import com.hypixel.hytale.server.core.modules.entity.EntityModule
@@ -20,7 +22,7 @@ import com.hypixel.hytale.server.core.universe.world.meta.BlockStateModule
 import com.hypixel.hytale.server.core.universe.world.meta.state.ItemContainerState
 import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore
-import me.clcondorcet.boiteaoutils.utils.interactions.CheckFalse
+import java.util.UUID
 
 val ItemContainerStateType: ComponentType<ChunkStore, ItemContainerState>? = BlockStateModule.get().getComponentType(ItemContainerState::class.java)
 
@@ -79,4 +81,24 @@ fun World.getBlockRef(x: Int, y: Int, z: Int): Ref<ChunkStore>? {
 
 fun <T : Component<ChunkStore>> Ref<ChunkStore>.getComponent(componentType: ComponentType<ChunkStore, T>): T? {
     return this.store.getComponent(this, componentType)
+}
+
+fun BlockPosition.equals(blockPosition: BlockPosition): Boolean {
+    return blockPosition.x == this.x && blockPosition.y == this.y && blockPosition.z == this.z
+}
+
+fun BlockPosition.toVector3d(): Vector3d {
+    return Vector3d(this.x.toDouble(), this.y.toDouble(), this.z.toDouble())
+}
+
+fun BlockPosition.add(vector: Vector3i): BlockPosition {
+    return BlockPosition(this.x + vector.x, this.y + vector.y, this.z + vector.z)
+}
+
+fun Vector3d.add(vector: Vector3d): Vector3d {
+    return Vector3d(this.x + vector.x, this.y + vector.y, this.z + vector.z)
+}
+
+fun Ref<EntityStore>.getRefUUID(): UUID? {
+    return this.store.getComponent(this, UUIDComponent.getComponentType())?.uuid
 }
