@@ -17,10 +17,10 @@
     ],
     "BenchRequirement": [
       {
-        "Id": "Builders",
+        "Id": "GamesTable",
         "Type": "StructuralCrafting",
         "Categories": [
-          "Stool"
+          "BuilderTools_Bench"
         ]
       }
     ]
