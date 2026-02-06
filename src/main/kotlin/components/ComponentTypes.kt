@@ -13,6 +13,6 @@ lateinit var componentTypes: ComponentTypes
 
 fun registerComponentTypes(chunkStoreRegistry: ComponentRegistryProxy<ChunkStore>, entityStoreRegistry: ComponentRegistryProxy<EntityStore>) {
     componentTypes = ComponentTypes(
-        chunkStoreRegistry.registerComponent(HolographicContainerQuantityCounter::class.java, "HolographicContainerSizeCounter", HolographicContainerQuantityCounter.CODEC)
+        chunkStoreRegistry.registerComponent(HolographicContainerQuantityCounter::class.java, "HolographicContainerQuantityCounter", HolographicContainerQuantityCounter.CODEC)
     )
 }
