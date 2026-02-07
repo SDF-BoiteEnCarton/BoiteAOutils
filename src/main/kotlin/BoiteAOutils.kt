@@ -1,15 +1,15 @@
-package me.clcondorcet.boiteaoutils
+package io.boiteencarton.boiteaoutils
 
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction
 import com.hypixel.hytale.server.core.plugin.JavaPlugin
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit
-import me.clcondorcet.boiteaoutils.commands.BoiteCommand
-import me.clcondorcet.boiteaoutils.components.registerComponentTypes
-import me.clcondorcet.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
-import me.clcondorcet.boiteaoutils.interactions.Distribute
-import me.clcondorcet.boiteaoutils.interactions.RandomRotation
-import me.clcondorcet.boiteaoutils.packets.HidingCardsPacketHandler
-import me.clcondorcet.boiteaoutils.systems.HolographicContainerQuantityCounterSystem
+import io.boiteencarton.boiteaoutils.commands.BoiteCommand
+import io.boiteencarton.boiteaoutils.components.registerComponentTypes
+import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
+import io.boiteencarton.boiteaoutils.interactions.Distribute
+import io.boiteencarton.boiteaoutils.interactions.RandomRotation
+import io.boiteencarton.boiteaoutils.packets.HidingCardsPacketHandler
+import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterSystem
 
 class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
 

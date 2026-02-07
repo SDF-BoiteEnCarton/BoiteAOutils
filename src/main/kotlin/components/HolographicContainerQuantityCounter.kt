@@ -1,4 +1,4 @@
-package me.clcondorcet.boiteaoutils.components
+package io.boiteencarton.boiteaoutils.components
 
 import com.hypixel.hytale.codec.Codec
 import com.hypixel.hytale.codec.KeyedCodec

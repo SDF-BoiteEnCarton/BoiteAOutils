@@ -1,4 +1,4 @@
-package me.clcondorcet.boiteaoutils.systems
+package io.boiteencarton.boiteaoutils.systems
 
 import com.hypixel.hytale.component.AddReason
 import com.hypixel.hytale.component.CommandBuffer
@@ -11,7 +11,7 @@ import com.hypixel.hytale.math.util.ChunkUtil
 import com.hypixel.hytale.server.core.modules.block.BlockModule
 import com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk
 import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore
-import me.clcondorcet.boiteaoutils.components.componentTypes
+import io.boiteencarton.boiteaoutils.components.componentTypes
 
 class HolographicContainerQuantityCounterInitializer : RefSystem<ChunkStore>() {
     override fun getQuery(): Query<ChunkStore> {

@@ -1,4 +1,4 @@
-package me.clcondorcet.boiteaoutils.utils
+package io.boiteencarton.boiteaoutils.utils
 
 import java.util.LinkedList
 import kotlin.random.Random

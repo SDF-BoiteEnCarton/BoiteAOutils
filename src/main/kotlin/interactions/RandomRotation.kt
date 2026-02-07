@@ -1,14 +1,14 @@
-package me.clcondorcet.boiteaoutils.interactions
+package io.boiteencarton.boiteaoutils.interactions
 
 import com.hypixel.hytale.codec.builder.BuilderCodec
 import com.hypixel.hytale.logger.HytaleLogger
 import com.hypixel.hytale.math.util.ChunkUtil
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction
 import com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk
-import me.clcondorcet.boiteaoutils.utils.*
-import me.clcondorcet.boiteaoutils.utils.interactions.CheckFalse
-import me.clcondorcet.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
-import me.clcondorcet.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
+import io.boiteencarton.boiteaoutils.utils.*
+import io.boiteencarton.boiteaoutils.utils.interactions.CheckFalse
+import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
+import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
 
 
 class RandomRotation : KotlinSimpleInstantInteraction() {

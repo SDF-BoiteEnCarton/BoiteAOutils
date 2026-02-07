@@ -1,4 +1,4 @@
-package me.clcondorcet.boiteaoutils.utils.interactions
+package io.boiteencarton.boiteaoutils.utils.interactions
 
 import com.hypixel.hytale.component.CommandBuffer
 import com.hypixel.hytale.component.Ref
@@ -12,7 +12,6 @@ import com.hypixel.hytale.server.core.entity.InteractionContext
 import com.hypixel.hytale.server.core.entity.entities.Player
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction
-import com.hypixel.hytale.server.core.universe.PlayerRef
 import com.hypixel.hytale.server.core.universe.world.World
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore
 

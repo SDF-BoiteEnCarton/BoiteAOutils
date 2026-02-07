@@ -5,14 +5,14 @@ plugins {
 }
 
 val javaVersion = 25
-group = "me.clcondorcet"
-version = "v0.3.0"
+group = "io.boiteencarton"
+version = "0.4.0"
 
 val server_version = "*"
 val plugin_description = "Core plugin of BoiteEnCarton Games"
 val plugin_author = "Albador"
 val plugin_website = ""
-val plugin_main_entrypoint = "me.clcondorcet.boiteaoutils.BoiteAOutils"
+val plugin_main_entrypoint = "io.boiteencarton.boiteaoutils.BoiteAOutils"
 
 repositories {
     mavenCentral()
