@@ -58,7 +58,7 @@ class Distribute : KotlinSimpleInstantInteraction() {
                 throw CheckFalse()
             }
 
-            context.heldItemContainer?.moveItemStackFromSlot(context.heldItemSlot.toShort(), 1, container?.itemContainer)
+            context.heldItemContainer?.moveItemStackFromSlot(context.heldItemSlot.toShort(), 1, container.itemContainer)
             player.playSoundNear("SFX_Drop_Items_Chest")
         } else {
             // Getting random item to container

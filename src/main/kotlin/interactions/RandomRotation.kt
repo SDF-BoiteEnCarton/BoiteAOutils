@@ -10,7 +10,6 @@ import io.boiteencarton.boiteaoutils.utils.interactions.CheckFalse
 import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
 import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
 
-
 class RandomRotation : KotlinSimpleInstantInteraction() {
 
     val LOGGER: HytaleLogger = HytaleLogger.forEnclosingClass()
