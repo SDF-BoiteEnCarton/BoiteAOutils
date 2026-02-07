@@ -1,9 +1,8 @@
-package me.clcondorcet.boiteaoutils.packets
+package io.boiteencarton.boiteaoutils.packets
 
 import com.hypixel.hytale.protocol.*
 import com.hypixel.hytale.protocol.packets.entities.EntityUpdates
 import com.hypixel.hytale.protocol.packets.interaction.PlayInteractionFor
-import com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChain
 import com.hypixel.hytale.protocol.packets.interaction.SyncInteractionChains
 import com.hypixel.hytale.server.core.asset.type.item.config.Item
 import com.hypixel.hytale.server.core.io.adapter.PacketAdapters

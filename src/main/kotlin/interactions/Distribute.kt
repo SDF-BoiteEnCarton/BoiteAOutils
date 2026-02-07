@@ -1,23 +1,17 @@
-package me.clcondorcet.boiteaoutils.interactions
+package io.boiteencarton.boiteaoutils.interactions
 
 import com.hypixel.hytale.codec.builder.BuilderCodec
-import com.hypixel.hytale.component.Holder
-import com.hypixel.hytale.component.Ref
 import com.hypixel.hytale.logger.HytaleLogger
-import com.hypixel.hytale.math.util.ChunkUtil
 import com.hypixel.hytale.protocol.BlockPosition
 import com.hypixel.hytale.server.core.Message
 import com.hypixel.hytale.server.core.inventory.ItemStack
 import com.hypixel.hytale.server.core.inventory.container.SimpleItemContainer
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction
 import com.hypixel.hytale.server.core.universe.world.meta.state.ItemContainerState
-import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore
-import me.clcondorcet.boiteaoutils.utils.*
-import me.clcondorcet.boiteaoutils.utils.interactions.CheckFalse
-import me.clcondorcet.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
-import me.clcondorcet.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
-import java.util.concurrent.CompletableFuture
-import java.util.function.Supplier
+import io.boiteencarton.boiteaoutils.utils.*
+import io.boiteencarton.boiteaoutils.utils.interactions.CheckFalse
+import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
+import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
 
 class Distribute : KotlinSimpleInstantInteraction() {
 

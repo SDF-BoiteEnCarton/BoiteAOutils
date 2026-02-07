@@ -1,4 +1,4 @@
-package me.clcondorcet.boiteaoutils.components
+package io.boiteencarton.boiteaoutils.components
 
 import com.hypixel.hytale.component.ComponentRegistryProxy
 import com.hypixel.hytale.component.ComponentType
