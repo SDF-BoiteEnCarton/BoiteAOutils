@@ -5,10 +5,12 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit
 import io.boiteencarton.boiteaoutils.commands.BoiteCommand
 import io.boiteencarton.boiteaoutils.components.registerComponentTypes
-import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
+import io.boiteencarton.boiteaoutils.events.ecs.BlockRotationKeeperBreakEvent
+import io.boiteencarton.boiteaoutils.events.ecs.BlockRotationKeeperPlaceEvent
 import io.boiteencarton.boiteaoutils.interactions.Distribute
 import io.boiteencarton.boiteaoutils.interactions.RandomRotation
 import io.boiteencarton.boiteaoutils.packets.HidingCardsPacketHandler
+import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
 import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterSystem
 
 class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
@@ -38,5 +40,9 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
     fun registerSystems() {
         chunkStoreRegistry.registerSystem(HolographicContainerQuantityCounterInitializer())
         chunkStoreRegistry.registerSystem(HolographicContainerQuantityCounterSystem())
+
+        // Register events
+        entityStoreRegistry.registerSystem(BlockRotationKeeperBreakEvent())
+        entityStoreRegistry.registerSystem(BlockRotationKeeperPlaceEvent())
     }
 }
