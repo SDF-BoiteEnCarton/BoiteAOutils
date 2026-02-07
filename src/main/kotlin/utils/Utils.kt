@@ -91,6 +91,10 @@ fun BlockPosition.toVector3d(): Vector3d {
     return Vector3d(this.x.toDouble(), this.y.toDouble(), this.z.toDouble())
 }
 
+fun BlockPosition.toVector3i(): Vector3i {
+    return Vector3i(this.x, this.y, this.z)
+}
+
 fun BlockPosition.add(vector: Vector3i): BlockPosition {
     return BlockPosition(this.x + vector.x, this.y + vector.y, this.z + vector.z)
 }
