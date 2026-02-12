@@ -1,0 +1,72 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Dice6V6.name",
+    "Description": ""
+  },
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Models_Textures/TextureD6CarreBlanc.png"
+      }
+    ],
+    "CustomModel": "Resources/Models/DiceD6-6Model.blockymodel",
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "ChangeState",
+            "Changes": {
+              "default": "Animation"
+            },
+            "RunTime": 1
+          }
+        ]
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Animation": {
+          "CustomModelAnimation": "Resources/Animation/D6_Launch_Animation.blockyanim",
+          "Material": "Solid",
+          "Interactions": {
+            "Use": {
+              "Interactions": [
+                {
+                  "Type": "ChangeState",
+                  "Changes": {
+                    "Animation": "default"
+                  },
+                  "UpdateBlockState": false
+                }
+              ]
+            }
+          },
+          "Opacity": "Semitransparent",
+          "DrawType": "Model"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "SoftBlocks"
+      }
+    },
+    "VariantRotation": "NESW"
+  },
+  "Icon": "Icons/ItemsGenerated/Dice6V6.png",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}

@@ -8,7 +8,7 @@
       "Icon": "Icons/ItemCategories/Builder Tools.png",
       "InfoDisplayMode": "Tooltip"
     },
-	  {
+    {
       "Name": "Love Letter",
       "Icon": "Icons/ItemCategories/Love_Letter_Caree_Verso_128x128.png",
       "Id": "Loveletter"
@@ -17,6 +17,11 @@
       "Name": "Boop",
       "Icon": "Icons/ItemCategories/BoopCardLogoIcon.png",
       "Id": "Boop"
+    },
+    {
+      "Id": "DarkCastle",
+      "Name": "Dark Castle",
+      "Icon": "Icons/ItemCategories/Card_DarkCastle_256x256_Texture.png"
     }
   ]
 }

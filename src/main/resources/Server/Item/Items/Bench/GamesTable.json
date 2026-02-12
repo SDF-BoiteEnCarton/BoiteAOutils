@@ -59,6 +59,11 @@
           "Id": "Boop_Bench",
           "Icon": "Icons/CraftingCategories/BoopCardLogoIcon.png",
           "Name": "server.benchCategories.boop.storage"
+        },
+        {
+          "Id": "DarkCastle.Bench",
+          "Name": "server.benchCategories.darkcastle.storage",
+          "Icon": "Icons/CraftingCategories/Card_DarkCastle_256x256_Texture.png"
         }
       ],
       "LocalOpenSoundEventId": "SFX_Workbench_Open",
