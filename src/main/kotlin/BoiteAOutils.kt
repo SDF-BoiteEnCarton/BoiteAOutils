@@ -5,10 +5,8 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit
 import io.boiteencarton.boiteaoutils.commands.BoiteCommand
 import io.boiteencarton.boiteaoutils.components.registerComponentTypes
-import io.boiteencarton.boiteaoutils.events.ecs.BlockRotationKeeperBreakEvent
-import io.boiteencarton.boiteaoutils.events.ecs.BlockRotationKeeperPlaceEvent
 import io.boiteencarton.boiteaoutils.interactions.Distribute
-import io.boiteencarton.boiteaoutils.interactions.RandomRotation
+import io.boiteencarton.boiteaoutils.interactions.RandomReplace
 import io.boiteencarton.boiteaoutils.packets.HidingCardsPacketHandler
 import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterInitializer
 import io.boiteencarton.boiteaoutils.systems.HolographicContainerQuantityCounterSystem
@@ -28,7 +26,7 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
         getCodecRegistry(Interaction.CODEC)
             .register("boiteaoutils_distribute", Distribute::class.java, Distribute.CODEC)
         getCodecRegistry(Interaction.CODEC)
-            .register("boiteaoutils_randomRotation", RandomRotation::class.java, RandomRotation.CODEC)
+            .register("boiteaoutils_RandomReplace", RandomReplace::class.java, RandomReplace.CODEC)
         HidingCardsPacketHandler().registerPacketCounters()
         registerComponentTypes(chunkStoreRegistry, entityStoreRegistry)
     }
@@ -42,7 +40,5 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
         chunkStoreRegistry.registerSystem(HolographicContainerQuantityCounterSystem())
 
         // Register events
-        entityStoreRegistry.registerSystem(BlockRotationKeeperBreakEvent())
-        entityStoreRegistry.registerSystem(BlockRotationKeeperPlaceEvent())
     }
 }

@@ -5,36 +5,33 @@ import com.hypixel.hytale.logger.HytaleLogger
 import com.hypixel.hytale.math.util.ChunkUtil
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction
 import com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk
+import io.boiteencarton.boiteaoutils.components.componentTypes
 import io.boiteencarton.boiteaoutils.utils.*
 import io.boiteencarton.boiteaoutils.utils.interactions.CheckFalse
 import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteraction
 import io.boiteencarton.boiteaoutils.utils.interactions.KotlinSimpleInstantInteractionRan
 
-class RandomRotation : KotlinSimpleInstantInteraction() {
+class RandomReplace : KotlinSimpleInstantInteraction() {
 
     val LOGGER: HytaleLogger = HytaleLogger.forEnclosingClass()
 
     companion object {
-        val CODEC: BuilderCodec<RandomRotation?> = BuilderCodec.builder(
-            RandomRotation::class.java, { RandomRotation() }, SimpleInstantInteraction.CODEC
+        val CODEC: BuilderCodec<RandomReplace?> = BuilderCodec.builder(
+            RandomReplace::class.java, { RandomReplace() }, SimpleInstantInteraction.CODEC
         ).build()
     }
 
-    // Valid rotations for the top face of the block to be different each time.
-    val possibleRotations = listOf(0, 4, 8, 12, 16, 24)
-
     override var interaction: KotlinSimpleInstantInteractionRan.() -> Unit = {
         val chunk: WorldChunk = world.getChunk(ChunkUtil.indexChunkFromBlock(targetBlock.x, targetBlock.z)) ?: throw CheckFalse()
-        val blockType = chunk.getBlockType(targetBlock.toVector3i()) ?: throw CheckFalse()
-
-        chunk.setBlock(targetBlock.x,
-            targetBlock.y,
-            targetBlock.z,
-            chunk.getBlock(targetBlock.toVector3i()),
-            blockType,
-            possibleRotations.random(),
-            chunk.getFiller(targetBlock.x, targetBlock.y, targetBlock.z),
-            chunk.getRotationIndex(targetBlock.x, targetBlock.y, targetBlock.z)
-        )
+        val comp = world.getBlockRef(targetBlock)?.getComponent(componentTypes.blockRandomReplace) ?: throw CheckFalse()
+        if (comp.replaceList.isEmpty()) throw CheckFalse()
+        val random = comp.replaceList.random()
+        world.execute {
+            chunk.setBlock(targetBlock.x,
+                targetBlock.y,
+                targetBlock.z,
+                random
+            )
+        }
     }
 }
