@@ -1,0 +1,85 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Trophy.name"
+  },
+  "Set": "Deco_Trophy",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Gold",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "GamesTable",
+        "Type": "StructuralCrafting",
+        "Categories": [
+          "BuilderTools_Bench"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 1
+  },
+  "BlockType": {
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "RandomRotation": "None",
+    "BlockParticleSetId": "Metal",
+    "BlockSoundSetId": "Metal",
+    "ParticleColor": "#feb03f",
+    "VariantRotation": "NESW",
+    "DrawType": "Model",
+    "CustomModel": "Resources/Models/Trophee.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Models_Textures/Trophée.png"
+      }
+    ],
+    "Material": "Solid",
+    "RotationYawPlacementOffset": "None",
+    "FlipType": "Symmetric"
+  },
+  "Tags": {
+    "Type": [
+      "Block.Deco"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 1,
+  "IconProperties": {
+    "Scale": 0.8,
+    "Rotation": [
+      0,
+      168,
+      0
+    ],
+    "Translation": [
+      0,
+      -16
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Trophee_Win.png",
+  "PlayerAnimationsId": "Trophy",
+  "Categories": [
+    "BoiteAOutils_Outils.Outils"
+  ],
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Condition",
+          "Crouching": true,
+          "Next": {
+            "Type": "PlaceBlock",
+            "BlockTypeToPlace": "Trophee_Win"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,14 @@ blocks.BoiteAOutils_Distributeur.interaction.hint=Press [{key}] get random item
 
 items.GamesTable.name=GamesTable
 
+items.Dice6V1.name=Dé 1
+items.Dice6V2.name=Dé 2
+items.Dice6V3.name=Dé 3
+items.Dice6V4.name=Dé 4
+items.Dice6V5.name=Dé 5
+items.Dice6V6.name=Dé 6
+
+
 benchCategories.builderTools.storage=Outils
 benchCategories.loveletter.storage=Love letter
 
