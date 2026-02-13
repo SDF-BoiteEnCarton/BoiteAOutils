@@ -21,7 +21,10 @@
             "Changes": {
               "default": "Animation"
             },
-            "RunTime": 1
+            "RunTime": 1,
+            "Next": {
+              "Type": "boiteaoutils_RandomReplace"
+            }
           }
         ]
       }
@@ -31,6 +34,8 @@
         "Animation": {
           "CustomModelAnimation": "Resources/Animation/D6_Launch_Animation.blockyanim",
           "Material": "Solid",
+          "Opacity": "Semitransparent",
+          "DrawType": "Model",
           "Interactions": {
             "Use": {
               "Interactions": [
@@ -39,13 +44,13 @@
                   "Changes": {
                     "Animation": "default"
                   },
-                  "UpdateBlockState": false
+                  "Next": {
+                    "Type": "boiteaoutils_RandomReplace"
+                  }
                 }
               ]
             }
-          },
-          "Opacity": "Semitransparent",
-          "DrawType": "Model"
+          }
         }
       }
     },
@@ -54,7 +59,21 @@
         "GatherType": "SoftBlocks"
       }
     },
-    "VariantRotation": "NESW"
+    "VariantRotation": "NESW",
+    "BlockEntity": {
+      "Components": {
+        "BlockRandomReplace": {
+          "ReplaceList": [
+            "Dice6V1",
+            "Dice6V2",
+            "Dice6V3",
+            "Dice6V4",
+            "Dice6V5",
+            "Dice6V6"
+          ]
+        }
+      }
+    }
   },
   "Icon": "Icons/ItemsGenerated/Dice6V2.png",
   "IconProperties": {
