@@ -5,7 +5,13 @@
   "Description": "${plugin_description}",
   "Authors": [
     {
-      "Name": "${plugin_author}"
+      "Name": "Mimite"
+    },
+    {
+      "Name": "Leny15"
+    },
+    {
+      "Name": "Albador"
     }
   ],
   "Website": "${plugin_website}",

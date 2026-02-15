@@ -6,7 +6,7 @@ plugins {
 
 val javaVersion = 25
 group = "io.boiteencarton"
-version = "0.5.0"
+version = "1.0.0"
 
 val server_version = "*"
 val plugin_description = "Core plugin of BoiteEnCarton Games"
