@@ -20,8 +20,13 @@
     },
     {
       "Id": "DarkCastle",
-      "Name": "Dark Castle",
+      "Name": "Escape the Dark Castle",
       "Icon": "Icons/ItemCategories/Card_DarkCastle_256x256_Texture.png"
+    },
+    {
+      "Id": "Predateur",
+      "Name": "Prédateur ou Proie",
+      "Icon": "Icons/ItemCategories/Predateur_ou_Proie_Logo.png"
     }
   ]
 }
