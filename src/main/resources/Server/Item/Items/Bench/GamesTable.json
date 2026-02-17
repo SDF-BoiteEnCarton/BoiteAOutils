@@ -64,6 +64,11 @@
           "Id": "DarkCastle.Bench",
           "Name": "server.benchCategories.darkcastle.storage",
           "Icon": "Icons/CraftingCategories/Card_DarkCastle_256x256_Texture.png"
+        },
+        {
+          "Id": "Predateur_Bench",
+          "Name": "server.benchCategories.predateur.storage",
+          "Icon": "Icons/CraftingCategories/Predateur_ou_Proie_Logo.png"
         }
       ],
       "LocalOpenSoundEventId": "SFX_Workbench_Open",
