@@ -21,16 +21,18 @@ class HidingCardsPacketHandler {
                     packet.updates?.forEach { update ->
                         if (networkId?.id != update.networkId) {
                             update?.updates?.clone()?.forEach { entityUpdate ->
-                                val itemId = entityUpdate.equipment?.rightHandItemId ?: return@forEach
-                                Item.getAssetMap()?.getAsset(itemId)?.let { asset ->
-                                    if (asset.data.rawTags.contains("Hidden")) {
-                                        val modifiedObj = entityUpdate.clone()
-                                        modifiedObj.equipment?.rightHandItemId =
-                                            asset.data.rawTags["Hidden"]?.first() ?: return@forEach
-                                        val newArray = update.updates!!.toMutableList()
-                                        newArray.remove(entityUpdate)
-                                        newArray.add(modifiedObj)
-                                        update.updates = newArray.toTypedArray()
+                                if (entityUpdate is EquipmentUpdate) {
+                                    val itemId = entityUpdate.rightHandItemId ?: return@forEach
+                                    Item.getAssetMap()?.getAsset(itemId)?.let { asset ->
+                                        if (asset.data.rawTags.contains("Hidden")) {
+                                            val modifiedObj = entityUpdate.clone()
+                                            modifiedObj.rightHandItemId =
+                                                asset.data.rawTags["Hidden"]?.first() ?: return@forEach
+                                            val newArray = update.updates!!.toMutableList()
+                                            newArray.remove(entityUpdate)
+                                            newArray.add(modifiedObj)
+                                            update.updates = newArray.toTypedArray()
+                                        }
                                     }
                                 }
                             }
