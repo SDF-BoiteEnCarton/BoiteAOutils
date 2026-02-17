@@ -1,14 +1,14 @@
 plugins {
     kotlin("jvm") version "2.3.0"
     `maven-publish`
-    id("hytale-mod") version "0.+"
+    id("hytale-mod") version "0.7.2-alpha"
 }
 
 val javaVersion = 25
 group = "io.boiteencarton"
-version = "1.0.0"
+version = "1.1.0"
 
-val server_version = "*"
+val server_version = "2026.02.17-255364b8e"
 val plugin_description = "Core plugin of BoiteEnCarton Games"
 val plugin_author = "Albador"
 val plugin_website = ""
