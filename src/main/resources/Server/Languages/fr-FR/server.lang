@@ -1,8 +1,7 @@
 items.BoiteAOutils_Distributeur.name=Distributeur
-blocks.BoiteAOutils_Distributeur.interaction.hint=Press [{key}] get random item
+blocks.BoiteAOutils_Distributeur.interaction.hint=Press [{key}] obtenir un objet aléatoire
 
-items.GamesTable.name=GamesTable
-
+items.Trophy.name=Trophée en or
 items.Dice6V1.name=Dé 1
 items.Dice6V2.name=Dé 2
 items.Dice6V3.name=Dé 3
@@ -10,8 +9,10 @@ items.Dice6V4.name=Dé 4
 items.Dice6V5.name=Dé 5
 items.Dice6V6.name=Dé 6
 
+items.GamesTable.name=GamesTable
 
 benchCategories.builderTools.storage=Outils
 benchCategories.loveletter.storage=Love letter
-
-benchCategories.boop.storage=Boop
+benchCategories.boop.storage=Boop (Prochainement)
+benchCategories.darkcastle.storage=Escape the Dark Castle (Prochainement)
+benchCategories.predateur.storage= Prédateur ou Proie (Prochainement)
