@@ -98,17 +98,17 @@
         "ItemId": "Ingredient_Tree_Sap"
       }
     ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 1,
     "BenchRequirement": [
       {
         "Id": "GamesTable",
-        "Type": "StructuralCrafting",
+        "Type": "Crafting",
         "Categories": [
           "BuilderTools_Bench"
         ]
       }
-    ],
-    "OutputQuantity": 1,
-    "TimeSeconds": 1
+    ]
   },
   "Categories": [
     "BoiteAOutils_Outils.Outils"

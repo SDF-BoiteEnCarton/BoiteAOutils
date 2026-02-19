@@ -13,7 +13,7 @@
     "BenchRequirement": [
       {
         "Id": "GamesTable",
-        "Type": "StructuralCrafting",
+        "Type": "Crafting",
         "Categories": [
           "BuilderTools_Bench"
         ]
