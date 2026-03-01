@@ -10,7 +10,6 @@ version = "1.3.0"
 
 val server_version = "2026.02.19-1a311a592"
 val plugin_description = "Core plugin of BoiteEnCarton Games"
-val plugin_author = "Albador"
 val plugin_website = ""
 val plugin_main_entrypoint = "io.boiteencarton.boiteaoutils.BoiteAOutils"
 
@@ -60,7 +59,6 @@ tasks.named<ProcessResources>("processResources") {
         "plugin_website" to plugin_website,
 
         "plugin_main_entrypoint" to plugin_main_entrypoint,
-        "plugin_author" to plugin_author
     )
 
     filesMatching("manifest.json") {
