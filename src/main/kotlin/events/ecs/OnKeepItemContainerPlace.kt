@@ -7,6 +7,9 @@ import com.hypixel.hytale.component.query.Query
 import com.hypixel.hytale.component.system.EntityEventSystem
 import com.hypixel.hytale.math.util.ChunkUtil
 import com.hypixel.hytale.server.core.event.events.ecs.PlaceBlockEvent
+import com.hypixel.hytale.server.core.inventory.container.filter.FilterActionType
+import com.hypixel.hytale.server.core.inventory.container.filter.FilterType
+import com.hypixel.hytale.server.core.inventory.container.filter.SlotFilter
 import com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore
 import io.boiteencarton.boiteaoutils.types.KeptContainer

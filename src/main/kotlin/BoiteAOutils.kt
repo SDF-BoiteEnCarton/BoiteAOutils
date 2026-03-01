@@ -6,6 +6,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPluginInit
 import io.boiteencarton.boiteaoutils.commands.BoiteCommand
 import io.boiteencarton.boiteaoutils.commands.GetItemJsonCommand
 import io.boiteencarton.boiteaoutils.components.registerComponentTypes
+import io.boiteencarton.boiteaoutils.events.ecs.OnContainerFilterTagPlace
 import io.boiteencarton.boiteaoutils.events.ecs.OnKeepItemContainerBreak
 import io.boiteencarton.boiteaoutils.events.ecs.OnKeepItemContainerPlace
 import io.boiteencarton.boiteaoutils.interactions.Distribute
@@ -47,5 +48,6 @@ class BoiteAOutils(init: JavaPluginInit) : JavaPlugin(init) {
         // Register events
         entityStoreRegistry.registerSystem(OnKeepItemContainerBreak())
         entityStoreRegistry.registerSystem(OnKeepItemContainerPlace())
+        entityStoreRegistry.registerSystem(OnContainerFilterTagPlace())
     }
 }
